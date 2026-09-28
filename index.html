@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RemoteConnect — Fast, secure remote desktop access</title>
+<meta name="description" content="RemoteConnect is a lightweight, peer-to-peer remote desktop app: view and control another computer's screen, sync your clipboard, and connect in seconds — no accounts, no setup.">
+<link rel="canonical" href="https://marklibres.site/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RemoteConnect">
+<meta property="og:url" content="https://marklibres.site/">
+<meta property="og:title" content="RemoteConnect — Fast, secure remote desktop access">
+<meta property="og:description" content="A lightweight, peer-to-peer remote desktop app: view and control another computer's screen, sync your clipboard, and connect in seconds — no accounts, no setup.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="RemoteConnect — Fast, secure remote desktop access">
+<meta name="twitter:description" content="A lightweight, peer-to-peer remote desktop app: view and control another computer's screen, sync your clipboard, and connect in seconds — no accounts, no setup.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="4" width="20" height="13" rx="2.2" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M8.5 8.5l2.5 2.5-2.5 2.5M13 13.5h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      RemoteConnect
+    </a>
+
+    <nav class="site-nav" id="site-nav">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#security">Security</a>
+      <a href="#download">Download</a>
+      <a href="#sponsor">Sponsor</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#download" class="btn btn-primary btn-sm">Download</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="blob blob-1" data-parallax="0.18"></span>
+      <span class="blob blob-2" data-parallax="0.32"></span>
+      <span class="blob blob-3" data-parallax="0.12"></span>
+    </div>
+    <div id="particles-js" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow anim-in" style="--d:0">Peer-to-peer &middot; Low latency &middot; No account required</p>
+        <h1 class="anim-in" style="--d:1">Reach any <span class="typed-wrap"><span id="typed-text" aria-hidden="true"></span><span class="typed-cursor" aria-hidden="true"></span><span class="sr-only">computer</span></span>,<br>anywhere, in seconds.</h1>
+        <p class="hero-sub anim-in" style="--d:2">
+          RemoteConnect gives you full mouse-and-keyboard control of another
+          computer's screen over a direct, encrypted WebRTC connection — with
+          synced clipboard, live device presence, and nothing to configure.
+        </p>
+        <div class="hero-actions anim-in" style="--d:3">
+          <a href="#download" class="btn btn-primary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 18v1.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Get RemoteConnect
+          </a>
+          <a href="#how-it-works" class="btn btn-ghost btn-lg">See how it works</a>
+        </div>
+        <p class="hero-meta anim-in" style="--d:4">Windows &middot; Free while in preview</p>
+      </div>
+
+      <div class="hero-art anim-in" style="--d:2" aria-hidden="true">
+        <div class="mock-tilt" id="mock-tilt">
+          <div class="mock-window">
+            <div class="mock-titlebar">
+              <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+            </div>
+            <div class="mock-body">
+              <div class="mock-card mock-id">
+                <div class="mock-label">This Device</div>
+                <div class="mock-id-value">294&nbsp;103&nbsp;557</div>
+                <div class="mock-status"><span class="dot dot-online"></span>Online</div>
+              </div>
+              <div class="mock-card mock-connect">
+                <div class="mock-label">Connect to a remote device</div>
+                <div class="mock-input">294 881 209</div>
+                <div class="mock-btn">Connect</div>
+              </div>
+              <div class="mock-card mock-recent">
+                <div class="mock-label">Recent Connections</div>
+                <div class="mock-row"><span class="dot dot-online"></span>Office-PC<span class="mock-time">2m ago</span></div>
+                <div class="mock-row"><span class="dot dot-offline"></span>Home-Desktop<span class="mock-time">Yesterday</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mock-glow"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-strip">
+    <div class="container trust-inner reveal">
+      <span>Built on WebRTC</span>
+      <span class="sep">&middot;</span>
+      <span>Direct P2P with automatic relay fallback</span>
+      <span class="sep">&middot;</span>
+      <span>End-to-end encrypted (DTLS/SRTP)</span>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Features</p>
+        <h2>Everything you need, nothing you don't</h2>
+        <p class="section-sub">A focused remote-desktop tool that gets out of your way.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="20" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Full screen control</h3>
+          <p>See the target's real screen and drive it with your mouse and keyboard, exactly like sitting in front of it.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Direct &amp; low-latency</h3>
+          <p>Connections negotiate a direct peer-to-peer WebRTC path whenever possible, and fall back to relay only when a network requires it.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="2" width="10" height="6" rx="1.5" stroke="currentColor" stroke-width="1.8"/><path d="M6 6H5a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-1" stroke="currentColor" stroke-width="1.8"/></svg>
+          </div>
+          <h3>Two-way clipboard sync</h3>
+          <p>Copy text, images, or files on either side and paste them on the other — no shared drive, no email-to-self required.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+          </div>
+          <h3>Live device presence</h3>
+          <p>Your Recent Connections list shows who's online right now, updated instantly — not on a slow refresh timer.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8"/></svg>
+          </div>
+          <h3>Nothing to sign up for</h3>
+          <p>Every install gets its own device ID automatically. Share your ID, or type someone else's, and you're connected.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Encrypted by default</h3>
+          <p>Every session runs over WebRTC's standard DTLS/SRTP encryption — control input and video are never sent in the clear.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="how-it-works">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="blob blob-4" data-parallax="0.15"></span>
+    </div>
+    <div class="container">
+      <div class="section-heading reveal">
+        <p class="eyebrow">How it works</p>
+        <h2>Three steps. No configuration.</h2>
+      </div>
+
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-num">1</span>
+          <h3>Install &amp; open</h3>
+          <p>Launch RemoteConnect on both computers. Each one is instantly assigned its own device ID — nothing to register.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">2</span>
+          <h3>Share your ID</h3>
+          <p>Send your device ID to whoever needs to connect to you, the same way you'd share a phone number.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">3</span>
+          <h3>Connect</h3>
+          <p>Type their ID in, they accept the request on their end, and you're viewing and controlling their screen in seconds.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="security" id="security">
+    <div class="container security-inner">
+      <div class="security-copy reveal">
+        <p class="eyebrow">Security</p>
+        <h2>Your session stays between the two of you</h2>
+        <p class="section-sub">
+          RemoteConnect's control channel is negotiated directly between the
+          two devices wherever the network allows it. Video, input, and
+          clipboard data travel over WebRTC's standard encrypted transport,
+          and a session only ever starts once the person on the other end
+          explicitly accepts your request.
+        </p>
+        <ul class="check-list">
+          <li>Explicit accept required before any control session begins</li>
+          <li>Encrypted end-to-end over DTLS/SRTP</li>
+          <li>Direct connection preferred; relay used only as a NAT-traversal fallback</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="download" id="download">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="blob blob-5" data-parallax="0.2"></span>
+    </div>
+    <div class="container download-inner reveal">
+      <p class="eyebrow">Download</p>
+      <h2>RemoteConnect for Windows</h2>
+      <p class="section-sub">One exe, nothing else to install. Download and run it — that's the whole setup.</p>
+
+      <div class="download-card">
+        <a class="btn btn-primary btn-lg" id="download-btn" href="https://github.com/mark-anthony-libres/remote-connect-client/releases/latest/download/RemoteConnect.exe" aria-describedby="download-note">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 18v1.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Download for Windows
+        </a>
+        <p class="download-note" id="download-note">Windows 10/11 &middot; 64-bit &middot; No installer or admin rights required</p>
+        <p class="download-note">
+          <a href="https://github.com/mark-anthony-libres/remote-connect-client/releases/latest" target="_blank" rel="noopener">Release notes &amp; checksum</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sponsor" id="sponsor">
+    <div class="container sponsor-inner reveal">
+      <p class="eyebrow">Support the project</p>
+      <h2>Help keep RemoteConnect free</h2>
+      <p class="section-sub">
+        RemoteConnect is built and maintained independently, with no ads and
+        no account required. If it's useful to you, sponsoring helps keep it
+        that way — or just reach out to say hello.
+      </p>
+      <div class="sponsor-actions">
+        <a href="mailto:marklibres345@gmail.com?subject=Sponsoring%20RemoteConnect" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 21s-7.5-4.6-10-9.3C.7 8.4 2 5 5.3 4.2 7.6 3.6 9.8 4.6 12 7c2.2-2.4 4.4-3.4 6.7-2.8C22 5 23.3 8.4 22 11.7 19.5 16.4 12 21 12 21Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+          Become a sponsor
+        </a>
+        <a href="mailto:marklibres345@gmail.com?subject=Hello%20RemoteConnect" class="btn btn-ghost btn-lg">Contact the developer</a>
+      </div>
+      <p class="sponsor-email">
+        Or email directly at <a href="mailto:marklibres345@gmail.com">marklibres345@gmail.com</a>
+        <span class="sep">&middot;</span>
+        <a href="https://marklibres.site" target="_blank" rel="noopener">marklibres.site</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="year"></span> RemoteConnect</span>
+    <span class="footer-note">Built with WebRTC.</span>
+    <a class="footer-note" href="mailto:marklibres345@gmail.com">marklibres345@gmail.com</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
