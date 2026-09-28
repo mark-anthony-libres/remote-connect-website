@@ -50,6 +50,10 @@ function onScroll() {
       el.style.transform = `translateY(${y * speed}px)`;
     });
   }
+
+  if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 2) {
+    revealTargets.forEach((el) => el.classList.add("is-visible"));
+  }
 }
 
 let scrollTicking = false;
