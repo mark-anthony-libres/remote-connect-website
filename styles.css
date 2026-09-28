@@ -270,9 +270,16 @@ button { font: inherit; cursor: pointer; }
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 56px;
+  grid-template-columns: 1fr;
   align-items: center;
+}
+
+.hero-copy {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
 }
 
 .eyebrow {
@@ -345,14 +352,22 @@ button { font: inherit; cursor: pointer; }
 
 .hero-meta {
   margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 0.85rem;
   color: var(--color-text-secondary);
 }
+.hero-meta svg { flex-shrink: 0; }
 
 .hero-art {
+  grid-column: 1;
+  grid-row: 1;
   position: relative;
+  z-index: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  pointer-events: none;
 }
 
 .mock-glow {
@@ -373,114 +388,13 @@ button { font: inherit; cursor: pointer; }
 .mock-window {
   position: relative;
   z-index: 1;
+  display: block;
   width: 100%;
-  max-width: 440px;
-  background: var(--color-card);
-  border: 1px solid rgba(41, 246, 255, 0.35);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg), var(--glow-cyan);
-  overflow: hidden;
+  max-width: 650px;
+  height: auto;
   transform-style: preserve-3d;
   animation: floatY 6s ease-in-out infinite;
-}
-
-.mock-titlebar {
-  display: flex;
-  gap: 6px;
-  padding: 14px 16px;
-  background: var(--color-hero-bg);
-}
-.mock-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--color-card-border);
-}
-.mock-dot:nth-child(1) { background: #F2A9A0; }
-.mock-dot:nth-child(2) { background: #F5D397; }
-.mock-dot:nth-child(3) { background: #9FE0B4; }
-
-.mock-body {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  background: var(--color-bg);
-}
-
-.mock-card {
-  background: var(--color-card);
-  border: 1px solid var(--color-card-border);
-  border-radius: var(--radius-md);
-  padding: 16px;
-}
-
-.mock-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--color-text-secondary);
-  margin-bottom: 10px;
-}
-
-.mock-id-value {
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-
-.mock-status {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: var(--color-text-secondary);
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.dot-online { background: var(--color-online); box-shadow: 0 0 8px rgba(44, 240, 138, 0.8); }
-.dot-offline { background: var(--color-offline); }
-
-.mock-input {
-  background: var(--color-subtle-bg);
-  border-radius: var(--radius-sm);
-  padding: 10px 12px;
-  font-size: 0.9rem;
-  color: var(--color-text-secondary);
-  margin-bottom: 10px;
-}
-
-.mock-btn {
-  display: inline-block;
-  background: var(--color-accent-soft);
-  color: var(--color-accent-soft-text);
-  font-size: 0.85rem;
-  font-weight: 700;
-  padding: 8px 16px;
-  border-radius: 999px;
-}
-
-.mock-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.88rem;
-  padding: 8px 0;
-  border-top: 1px solid var(--color-card-border);
-}
-.mock-row:first-of-type { border-top: none; padding-top: 0; }
-
-.mock-time {
-  margin-left: auto;
-  color: var(--color-text-secondary);
-  font-size: 0.78rem;
+  will-change: transform;
 }
 
 .trust-strip {
@@ -498,6 +412,17 @@ button { font: inherit; cursor: pointer; }
   font-size: 0.85rem;
   color: var(--color-text-secondary);
   text-align: center;
+}
+
+.trust-inner span:not(.sep) {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.trust-inner span:not(.sep) svg {
+  color: var(--color-neon-cyan);
+  flex-shrink: 0;
 }
 
 .trust-inner .sep { color: var(--color-card-border); }
@@ -695,9 +620,14 @@ button { font: inherit; cursor: pointer; }
 
 .download-note {
   margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   font-size: 0.85rem;
   color: var(--color-text-secondary);
 }
+.download-note svg { flex-shrink: 0; }
 
 .download-note a {
   color: var(--color-neon-cyan);
@@ -765,8 +695,13 @@ button { font: inherit; cursor: pointer; }
 }
 
 @media (max-width: 960px) {
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-art { order: -1; }
+  /* Below this width the image no longer overlaps the text as a background -
+     it stacks above it instead, so it needs its own row rather than sharing
+     .hero-copy's (see the desktop-only overlap above). */
+  .hero-inner { row-gap: 32px; }
+  .hero-copy { grid-row: 2; max-width: none; }
+  .hero-art { grid-row: 1; justify-content: center; pointer-events: auto; }
+  .mock-window { max-width: 480px; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: repeat(2, 1fr); }
 }
